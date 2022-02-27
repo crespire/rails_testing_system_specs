@@ -4,7 +4,7 @@ require 'rails_helper'
 
 RSpec.describe 'deleting a city', type: :system do
   scenario 'success' do
-    nyc = City.create!(name: 'NYC')
+    City.create!(name: 'NYC')
     visit cities_path
     expect(page).to have_content('NYC')
 
